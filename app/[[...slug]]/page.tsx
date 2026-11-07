@@ -172,7 +172,7 @@ const markets = [
 ];
 
 const users: User[] = [
-  { id: 'u_josh', name: 'Josh Odmark', role: 'network_admin', city: 'Richmond, VA', marketId: 'mkt_rva', level: 8, stage: 'Investor Social Private', headline: 'Founder and network operator.', assignedDealIds: ['dl_1', 'dl_2'] },
+  { id: 'u_alex', name: 'Alex Morgan', role: 'network_admin', city: 'Richmond, VA', marketId: 'mkt_rva', level: 8, stage: 'Investor Social Private', headline: 'Founder and network operator.', assignedDealIds: ['dl_1', 'dl_2'] },
   { id: 'u_marcus', name: 'Marcus Bell', role: 'investor', city: 'Market-flexible', marketId: 'mkt_rva', targetMarketIds: ['mkt_rva', 'mkt_cmh'], level: 6, stage: 'Active Investor', headline: 'Buying small multifamily; target markets are Richmond and Columbus.', canInvest: true, assignedDealIds: ['dl_1'] },
   { id: 'u_dana', name: 'Dana Whitfield', role: 'investor', city: 'Market-flexible', marketId: 'mkt_clt', targetMarketIds: ['mkt_clt', 'mkt_tpa'], level: 4, stage: 'Preparing', headline: 'First rental property; target markets are Charlotte and Tampa.', canInvest: true },
   { id: 'u_priya', name: 'Priya Raman', role: 'investor', city: 'Market-flexible', marketId: 'mkt_bna', targetMarketIds: ['mkt_bna', 'mkt_tpa'], level: 7, stage: 'Verified Investor', headline: 'Operates 9 short-term rentals; target markets are Nashville and Tampa.', canInvest: true, assignedDealIds: ['dl_2'] },
@@ -269,7 +269,7 @@ const initialDeals: Deal[] = [
     opportunityId: 'opp_1',
     stageIndex: 8,
     targetClose: '30 Sep 2026',
-    participants: ['u_marcus', 'u_alicia', 'u_kelly', 'u_hector', 'u_josh'],
+    participants: ['u_marcus', 'u_alicia', 'u_kelly', 'u_hector', 'u_alex'],
     tasks: [
       { id: 'tsk_1', label: 'Confirm written permit status with county', ownerId: 'u_alicia', due: '28 Aug 2026', priority: 'danger', complete: false },
       { id: 'tsk_2', label: 'Upload updated proof of funds', ownerId: 'u_marcus', due: '27 Aug 2026', priority: 'danger', complete: false },
@@ -282,11 +282,11 @@ const initialDeals: Deal[] = [
     id: 'dl_2',
     ref: 'IS-2026-0139',
     investorId: 'u_priya',
-    agentId: 'u_josh',
+    agentId: 'u_alex',
     opportunityId: 'opp_4',
     stageIndex: 4,
     targetClose: '12 Nov 2026',
-    participants: ['u_priya', 'u_josh'],
+    participants: ['u_priya', 'u_alex'],
     tasks: [{ id: 'tsk_6', label: 'Verify STR permit transferability', ownerId: 'u_priya', due: '3 Sep 2026', priority: 'danger', complete: false }],
   },
 ];
@@ -326,7 +326,7 @@ const reideModels: Record<string, { thesis: string; confidence: string; decision
       { label: 'Zoning/use', owner: 'REIDE', status: 'Complete', detail: 'Current use appears allowed.' },
       { label: 'Physical diligence', owner: 'Alicia', status: 'Blocked', detail: 'Specialist reports outstanding.' },
       { label: 'Capital stack', owner: 'Kelly', status: 'In review', detail: 'DSCR terms depend on reserve and rate-lock timing.' },
-      { label: 'IC memo', owner: 'Josh', status: 'Blocked', detail: 'Cannot finalize until permit conflict clears.' },
+      { label: 'IC memo', owner: 'Alex', status: 'Blocked', detail: 'Cannot finalize until permit conflict clears.' },
     ],
   },
   rde_2: {
@@ -357,7 +357,7 @@ const reideModels: Record<string, { thesis: string; confidence: string; decision
       { label: 'Zoning/use', owner: 'REIDE', status: 'Complete', detail: 'Conforming duplex.' },
       { label: 'Physical diligence', owner: 'Alicia', status: 'In review', detail: 'Insurance refresh pending.' },
       { label: 'Capital stack', owner: 'Kelly', status: 'In review', detail: 'Likely financeable.' },
-      { label: 'IC memo', owner: 'Josh', status: 'Complete', detail: 'Suitable as lower-volatility acquisition.' },
+      { label: 'IC memo', owner: 'Alex', status: 'Complete', detail: 'Suitable as lower-volatility acquisition.' },
     ],
   },
   rde_3: {
@@ -375,7 +375,7 @@ const reideModels: Record<string, { thesis: string; confidence: string; decision
     aiFindings: ['AirDNA-style revenue supports the seller claim, but licensing evidence does not.', 'Downside use is materially worse than the marketing deck suggests.', 'Best path is a legal memo before LOI, not after.'],
     nextQuestions: ['Can local counsel confirm transferability in writing?', 'Can Ray identify long-term rental comps as a fallback?', 'Does Priya want this risk profile inside her next allocation?'],
     sources: [
-      { label: 'Permits', source: 'Municipal STR registry + code notes', status: 'Conflict', confidence: '41%', finding: 'Operating permit may not transfer with sale.', owner: 'Josh Odmark' },
+      { label: 'Permits', source: 'Municipal STR registry + code notes', status: 'Conflict', confidence: '41%', finding: 'Operating permit may not transfer with sale.', owner: 'Alex Morgan' },
       { label: 'Zoning', source: 'Parcel zoning + STR overlay', status: 'Watch', confidence: '59%', finding: 'Overlay allows use only under active permit.', owner: 'REIDE' },
       { label: 'Tax assessment', source: 'County assessor', status: 'Clear', confidence: '81%', finding: 'Assessment within modeled range.', owner: 'Hector Alvarez' },
       { label: 'Revenue comps', source: 'STR market data + seller exports', status: 'Clear', confidence: '83%', finding: 'Revenue history is plausible.', owner: 'REIDE' },
@@ -388,7 +388,7 @@ const reideModels: Record<string, { thesis: string; confidence: string; decision
       { label: 'Zoning/use', owner: 'REIDE', status: 'Blocked', detail: 'Legal use depends on permit continuity.' },
       { label: 'Physical diligence', owner: 'Ray', status: 'In review', detail: 'Furniture reserve needs validation.' },
       { label: 'Capital stack', owner: 'Kelly', status: 'In review', detail: 'Lender may haircut seasonal income.' },
-      { label: 'IC memo', owner: 'Josh', status: 'Blocked', detail: 'Memo should wait for legal-use answer.' },
+      { label: 'IC memo', owner: 'Alex', status: 'Blocked', detail: 'Memo should wait for legal-use answer.' },
     ],
   },
 };
@@ -396,7 +396,7 @@ const reideModels: Record<string, { thesis: string; confidence: string; decision
 const marketPulse = [
   { marketId: 'mkt_rva', readiness: 81, blocker: 'Underwriting confidence', agent: 'Alicia Torres', helper: 'Hector Alvarez', suggestion: 'Run two REIDE review sessions before offer deadlines. Pair Marcus with Hector to pressure-test reserves and after-tax return before Alicia advances diligence.' },
   { marketId: 'mkt_clt', readiness: 58, blocker: 'Financing readiness', agent: 'Ray Sandoval', helper: 'Kelly Brandt', suggestion: 'Route Dana to Kelly before any property tour. Ray should only receive the lead after written preapproval or a DSCR term sheet is attached.' },
-  { marketId: 'mkt_bna', readiness: 94, blocker: 'Agent coverage gap', agent: 'Open territory', helper: 'Josh Odmark', suggestion: 'Approve a Nashville agent before routing Priya more STR opportunities. Josh should hold the relationship until an investor-literate agent is assigned.' },
+  { marketId: 'mkt_bna', readiness: 94, blocker: 'Agent coverage gap', agent: 'Open territory', helper: 'Alex Morgan', suggestion: 'Approve a Nashville agent before routing Priya more STR opportunities. Alex should hold the relationship until an investor-literate agent is assigned.' },
   { marketId: 'mkt_tpa', readiness: 67, blocker: 'Permit and partner coverage', agent: 'Open territory', helper: 'Sam Okafor', suggestion: 'Use REIDE to screen legal-use risk first, then recruit a Tampa agent with mixed-use and STR ordinance depth.' },
   { marketId: 'mkt_cmh', readiness: 72, blocker: 'Unverified opportunity supply', agent: 'Open territory', helper: 'Alicia Torres', suggestion: 'Keep Columbus submissions blinded until rent roll verification. Alicia can provide an underwriting second read while the territory is unfilled.' },
 ];
@@ -659,7 +659,7 @@ export default function Home() {
   const [reviewedReide, setReviewedReide] = useState<Record<string, string[]>>({});
   const [audit, setAudit] = useState([
     'Alicia Torres uploaded inspection report to IS-2026-0114.',
-    'Josh Odmark granted Priya Raman contact access to Marcus Bell.',
+    'Alex Morgan granted Priya Raman contact access to Marcus Bell.',
     'Ray Sandoval declined a lead: not transaction-ready.',
   ]);
   const [toast, setToast] = useState('');
@@ -1867,7 +1867,7 @@ function AdminEcosystem({ record }: { record: (message: string) => void }) {
           <div className="event-relations">
             <h3>Events and relationships</h3>
             <p>Sept event: Marcus, Kelly, Hector.</p>
-            <p>Chain: Josh {'>'} Marcus {'>'} Alicia {'>'} Kelly {'>'} IS-2026-0114.</p>
+            <p>Chain: Alex {'>'} Marcus {'>'} Alicia {'>'} Kelly {'>'} IS-2026-0114.</p>
           </div>
           <button onClick={() => record(`Ecosystem focus saved: ${selected.label}. Event and relationship recommendations refreshed.`)}>Refresh recommendations</button>
         </Card>
