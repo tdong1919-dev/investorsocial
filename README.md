@@ -2,7 +2,7 @@
 
 **Independent product architecture and interactive proof of concept by Crystal Thuy Dong**
 
-[**Explore the interactive prototype**](https://investor-social-operator-hub.hello978822.chatgpt.site/) · [Crystal's portfolio](https://crystalthuydong.netlify.app)
+[**Explore the interactive prototype**](https://investorsocial.netlify.app/) · [Crystal's portfolio](https://crystalthuydong.netlify.app)
 
 Investor Social is a proposed multi-role platform connecting investors, agent partners, service providers, deals, underwriting and operational follow-through in one workspace.
 
@@ -83,4 +83,4 @@ That same design discipline applies to CRM, workflow automation, decision-suppor
 
 © 2026 Crystal Thuy Dong. All rights reserved. This repository is a product case study and does not grant a license to proprietary implementation or private data.
 
-[Open prototype](https://investor-social-operator-hub.hello978822.chatgpt.site/) · [Portfolio](https://crystalthuydong.netlify.app) · [GitHub profile](https://github.com/tdong1919-dev)
+[Open prototype](https://investorsocial.netlify.app/) · [Portfolio](https://crystalthuydong.netlify.app) · [GitHub profile](https://github.com/tdong1919-dev)
